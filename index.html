@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gilberto Vieira | Portfólio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #121212;
+      --fg: #e0e0e0;
+      --highlight: #64ffda;
+      --link: #26c6da;
+      --card: #1e1e1e;
+    }
+
+    [data-theme="light"] {
+      --bg: #f9f9f9;
+      --fg: #1c1c1c;
+      --highlight: #00796b;
+      --link: #0288d1;
+      --card: #ffffff;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: 'Fira Code', monospace;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .container {
+      max-width: 960px;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--highlight);
+      text-decoration: underline;
+    }
+
+    .section-title {
+      color: var(--highlight);
+      border-bottom: 2px solid #333;
+      margin-bottom: 1.5rem;
+      padding-bottom: .3rem;
+    }
+
+    .card {
+      background-color: var(--card);
+      border: none;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      color: var(--fg);
+    }
+
+    .terminal-box {
+      background-color: var(--bg);
+      padding: 1rem;
+      border-left: 4px solid var(--highlight);
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer {
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    .dot {
+      color: var(--highlight);
+    }
+
+    .tech-item {
+      padding: 0.5rem;
+      background: var(--card);
+      margin: 0.3rem;
+      display: inline-block;
+      border-radius: 4px;
+    }
+
+    .p:text-muted {
+      color: var(--fg);
+    }
+
+    /* Fade-in */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* Loader */
+    #loader {
+      background-color: #000;
+      color: #64ffda;
+      font-family: 'Fira Code', monospace;
+      font-size: 1.2rem;
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    /* Typing effect */
+    .typing::after {
+      content: '|';
+      animation: blink 1s step-start infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    /* Theme toggle button */
+    #themeToggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 10000;
+    }
+  </style>
+</head>
+<body data-theme="dark">
+
+  <!-- Loader estilo terminal -->
+  <div id="loader">Booting system... loading Gilberto's portfolio...</div>
+
+  <!-- Botão de alternar tema -->
+  <button id="themeToggle" class="btn btn-sm btn-outline-light">🌙</button>
+
+  <!-- Conteúdo principal -->
+  <div class="container py-5" style="display: none;" id="mainContent">
+
+    <!-- Header -->
+    <header class="text-center mb-5 fade-in">
+      <h1 class="fw-bold"><span class="dot">&gt;</span> <span id="typed" class="typing"></span></h1>
+      <p>Analista de Sistemas | Desenvolvedor FullStack | Café ☕</p>
+    </header>
+
+    <!-- Sobre -->
+    <section class="fade-in">
+      <h2 class="section-title">/sobre</h2>
+      <div class="terminal-box">
+        <p>$ whoami</p>
+        <p><i class="fas fa-user-astronaut me-2"></i>Gilberto: desenvolvedor de sistemas, entusiasta em entregar soluções.</p>
+        <p><i class="fas fa-book me-2"></i>Stack principal: Java, Spring Boot, JSF</p>
+        <p><i class="fas fa-gamepad me-2"></i>Interesses: resolver problemas complexos, criar soluções inovadoras e aprimorar sistemas existentes.</p>
+      </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section class="fade-in">
+      <h2 class="section-title">/habilidades</h2>
+      <div class="mb-3">
+        <span class="tech-item">Java</span>
+        <span class="tech-item">JavaServer Faces (JSF)</span>
+        <span class="tech-item">Spring Boot</span>
+        <span class="tech-item">Microserviços (API)</span>
+        <span class="tech-item">PostgreSQL</span>
+        <span class="tech-item">DB2</span>
+        <span class="tech-item">MySQL</span>
+        <span class="tech-item">Docker</span>
+        <span class="tech-item">Git</span>
+      </div>
+    </section>
+
+    <!-- Projetos -->
+    <section class="mt-5 fade-in">
+      <h2 class="section-title">/projetos</h2>
+      <div class="row g-4">
+        <span>(em construção...)</span>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="mt-5 fade-in">
+      <h2 class="section-title">/contato</h2>
+      <p><i class="fas fa-envelope me-2"></i>Email: <a href="mailto:gmtobiass@gmail.com">gmtobiass@gmail.com</a></p>
+      <p><i class="fab fa-linkedin me-2"></i>LinkedIn: <a href="https://linkedin.com/in/gilbertovieira-" target="_blank">linkedin.com/in/gilbertovieira-</a></p>
+      <p><i class="fab fa-github me-2"></i>GitHub: <a href="https://github.com/gilmtvieira" target="_blank">github.com/gilmtvieira</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center mt-5 fade-in">
+      <hr class="border-secondary">
+      <p><i class="fa-regular fa-copyright"></i> 2025 Gilberto Vieira. Feito com &lt;/&gt; e cafeína ☕</p>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Loader + fade-in
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("mainContent").style.display = "block";
+
+        // Fade-in
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+      }, 1500);
+    });
+
+    // Typing effect
+    const typedText = "Gilberto Vieira";
+    let i = 0;
+    function type() {
+      if (i < typedText.length) {
+        document.getElementById("typed").innerHTML += typedText.charAt(i);
+        i++;
+        setTimeout(type, 200);
+      }
+    }
+    setTimeout(type, 1000);
+
+    // Theme toggle
+    const toggleBtn = document.getElementById("themeToggle");
+    const body = document.body;
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme) body.setAttribute("data-theme", savedTheme);
+
+    toggleBtn.addEventListener("click", () => {
+      const current = body.getAttribute("data-theme");
+      const next = current === "light" ? "dark" : "light";
+      body.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+      toggleBtn.textContent = next === "dark" ? "☀️" : "🌙";
+    });
+
+    // Inicializa botão com ícone correto
+    toggleBtn.textContent = body.getAttribute("data-theme") === "dark" ? "☀️" : "🌙";
+  </script>
+
+</body>
+</html>
